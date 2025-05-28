@@ -1,7 +1,8 @@
 package tests;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import java.io.IOException;
+
+import org.testng.annotations.*;
 
 import pages.BasePage;
 import pages.LoginPage;
@@ -12,7 +13,7 @@ public class BaseTest {
 	
 	
 	@BeforeMethod
-	public void beforeMethod()
+	public void beforeMethod() throws IOException
 	{
 		BasePage.InitWebDriver();
 		loginPage = new LoginPage();

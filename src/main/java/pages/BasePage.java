@@ -1,20 +1,29 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import utils.ConfigReader;
 
 public class BasePage {
-	
-	public static WebDriver driver;
-	
-	public static void InitWebDriver()
-	{
-		// instantiate Driver
-		// navigate to base url
-	}
-	
-	public static void QuitDriver()
-	{
-		driver.quit();
-	}
+    public static WebDriver driver;
 
+    public static void InitWebDriver() 
+    {
+    	//instaciate driver
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        
+        //navigate to url
+        driver.get(ConfigReader.getProperty("url"));
+    }
+
+    public static void QuitDriver() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 }

@@ -6,62 +6,69 @@ public class LoginPage extends BasePage {
 	private By usernameInput = By.id("TxtUserName");
     private By passwordInput = By.xpath("//input[@id='TxtPassword']");
     private By loginButton = By.xpath("//input[@id='container_0_LbLogin']");
-    private By errorMessage = By.id("LblMessage");
+    //private By errorMessage = By.id("LblMessage");
     
     public void enterUserName(String username)
     {
-    	
+    
+    	driver.findElement(usernameInput).clear();
+        driver.findElement(usernameInput).sendKeys(username);
     }
     
     public void enterPassword(String password)
     {
+    	 driver.findElement(passwordInput).clear();
+         driver.findElement(passwordInput).sendKeys(password);
     	
     }
     
     public void clickLoginButton()
     {
-    	
+        driver.findElement(loginButton).click();
+
     }
     
     public String getUserName()
     {
-    	return null;
+        return driver.findElement(usernameInput).getAttribute("value");
     	
     }
     
     public boolean IsLoginButtonEnabled()
     {
-    	return false;
+        return driver.findElement(loginButton).isEnabled();
+
     }
     
     public String getUsernameLabelText()
     {
-    	return null;
+      return driver.findElement(By.xpath("//label[normalize-space()='E-Mail Address']")).getText();
+    	
     }
     
     public String getPasswordLabelText()
     {
-    	return null;
+    	return driver.findElement(By.xpath("//label[normalize-space()='Password']")).getText();
     }
     
     public String getUsernameErrorMessage()
     {
-    	return null;
+        return driver.findElement(By.xpath("//span[@id='reqUserName']")).getText();
     }
     
     public String getPasswordErrorMessage()
     {
-    	return null;
+        return driver.findElement(By.xpath("//span[@id='reqPassword']")).getText();
     }
     
     public boolean isUsernameTextboxDisplayed()
     {
-    	return false;
+        return driver.findElement(usernameInput).isDisplayed();
     }
     
     public boolean isPasswordTextboxDisplayed()
     {
-    	return false;
+        return driver.findElement(passwordInput).isDisplayed();
     }
     
 }
