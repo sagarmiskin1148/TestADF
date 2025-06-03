@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-02T13:15:22 IST" name="Suite" finished-at="2025-06-02T13:16:01 IST" duration-ms="39543">
+  <suite started-at="2025-06-03T17:12:53 IST" name="Suite" finished-at="2025-06-03T17:13:26 IST" duration-ms="32987">
     <groups>
     </groups>
-    <test started-at="2025-06-02T13:15:22 IST" name="Test" finished-at="2025-06-02T13:16:01 IST" duration-ms="39543">
+    <test started-at="2025-06-03T17:12:53 IST" name="Test" finished-at="2025-06-03T17:13:26 IST" duration-ms="32987">
       <class name="tests.LoginTests">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.LoginTests@2755d705]" started-at="2025-06-02T13:15:22 IST" name="beforeSuite" finished-at="2025-06-02T13:15:22 IST" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.LoginTests@680bddf5]" started-at="2025-06-03T17:12:53 IST" name="beforeSuite" finished-at="2025-06-03T17:12:53 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.LoginTests@2755d705]" started-at="2025-06-02T13:15:22 IST" name="beforeMethod" finished-at="2025-06-02T13:15:32 IST" duration-ms="9797" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.LoginTests@680bddf5]" started-at="2025-06-03T17:12:53 IST" name="beforeMethod" finished-at="2025-06-03T17:13:01 IST" duration-ms="8693" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,15 +22,53 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="validateValidLogin()[pri:1, instance:tests.LoginTests@2755d705]" started-at="2025-06-02T13:15:32 IST" name="validateValidLogin" finished-at="2025-06-02T13:15:35 IST" duration-ms="3171" status="PASS">
+        <test-method signature="validateValidLogin()[pri:1, instance:tests.LoginTests@680bddf5]" started-at="2025-06-03T17:13:01 IST" name="validateValidLogin" finished-at="2025-06-03T17:13:01 IST" duration-ms="27" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "tests.LoginTests.test" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "tests.LoginTests.test" is null
+at tests.LoginTests.validateValidLogin(LoginTests.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateValidLogin -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.LoginTests@2755d705]" started-at="2025-06-02T13:15:35 IST" name="afterMethod" finished-at="2025-06-02T13:15:35 IST" duration-ms="589" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.LoginTests@680bddf5]" started-at="2025-06-03T17:13:02 IST" name="afterMethod" finished-at="2025-06-03T17:13:03 IST" duration-ms="1596" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.LoginTests@2755d705]" started-at="2025-06-02T13:15:35 IST" name="beforeMethod" finished-at="2025-06-02T13:15:54 IST" duration-ms="18253" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.LoginTests@680bddf5]" started-at="2025-06-03T17:13:03 IST" name="beforeMethod" finished-at="2025-06-03T17:13:09 IST" duration-ms="5772" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,15 +79,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="validateLoginButtonStatus()[pri:2, instance:tests.LoginTests@2755d705]" started-at="2025-06-02T13:15:54 IST" name="validateLoginButtonStatus" finished-at="2025-06-02T13:15:54 IST" duration-ms="42" status="PASS">
+        <test-method signature="validateLoginButtonStatus()[pri:2, instance:tests.LoginTests@680bddf5]" started-at="2025-06-03T17:13:09 IST" name="validateLoginButtonStatus" finished-at="2025-06-03T17:13:09 IST" duration-ms="55" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLoginButtonStatus -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.LoginTests@2755d705]" started-at="2025-06-02T13:15:54 IST" name="afterMethod" finished-at="2025-06-02T13:15:54 IST" duration-ms="329" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.LoginTests@680bddf5]" started-at="2025-06-03T17:13:09 IST" name="afterMethod" finished-at="2025-06-03T17:13:10 IST" duration-ms="1115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.LoginTests@2755d705]" started-at="2025-06-02T13:15:54 IST" name="beforeMethod" finished-at="2025-06-02T13:16:00 IST" duration-ms="6277" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.LoginTests@680bddf5]" started-at="2025-06-03T17:13:10 IST" name="beforeMethod" finished-at="2025-06-03T17:13:16 IST" duration-ms="5669" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -60,15 +98,34 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="validateLoginUI()[pri:3, instance:tests.LoginTests@2755d705]" started-at="2025-06-02T13:16:00 IST" name="validateLoginUI" finished-at="2025-06-02T13:16:01 IST" duration-ms="580" status="PASS">
+        <test-method signature="validateLoginUI()[pri:3, instance:tests.LoginTests@680bddf5]" started-at="2025-06-03T17:13:16 IST" name="validateLoginUI" finished-at="2025-06-03T17:13:17 IST" duration-ms="638" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLoginUI -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.LoginTests@2755d705]" started-at="2025-06-02T13:16:01 IST" name="afterMethod" finished-at="2025-06-02T13:16:01 IST" duration-ms="374" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.LoginTests@680bddf5]" started-at="2025-06-03T17:13:17 IST" name="afterMethod" finished-at="2025-06-03T17:13:17 IST" duration-ms="864" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.LoginTests@2755d705]" started-at="2025-06-02T13:16:02 IST" name="afterSuite" finished-at="2025-06-02T13:16:02 IST" duration-ms="23" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.LoginTests@680bddf5]" started-at="2025-06-03T17:13:17 IST" name="beforeMethod" finished-at="2025-06-03T17:13:24 IST" duration-ms="6602" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.LoginTests.validateLoginFormElementPositions()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="validateLoginFormElementPositions()[pri:4, instance:tests.LoginTests@680bddf5]" started-at="2025-06-03T17:13:24 IST" name="validateLoginFormElementPositions" finished-at="2025-06-03T17:13:25 IST" duration-ms="728" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLoginFormElementPositions -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.LoginTests@680bddf5]" started-at="2025-06-03T17:13:25 IST" name="afterMethod" finished-at="2025-06-03T17:13:26 IST" duration-ms="877" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.LoginTests@680bddf5]" started-at="2025-06-03T17:13:26 IST" name="afterSuite" finished-at="2025-06-03T17:13:26 IST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

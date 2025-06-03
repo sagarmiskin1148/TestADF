@@ -29,7 +29,7 @@ public class ExtentListenerClass implements ITestListener {
     private static ExtentReports extent = ExtentManager.getInstance();
     private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 
-    @Override
+    @Override 
     public void onStart(ITestContext context) {
         log.info("Extent Report Started");
     }

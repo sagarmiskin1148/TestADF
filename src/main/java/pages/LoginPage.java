@@ -1,9 +1,12 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
-public class LoginPage extends BasePage {
+import com.aventstack.extentreports.Status;
+
+public class LoginPage extends BasePage 
+{
+	
 
     public By emailLabel = By.xpath("//label[normalize-space()='E-Mail Address']");
     public By emailInput = By.xpath("//input[@id='TxtUserName']");
@@ -17,9 +20,10 @@ public class LoginPage extends BasePage {
     private By eyeIcon = By.xpath("//span[@class='fa fa-fw fa-eye field-icon perchahage-flow-toggle-password ']");
     private By forgotPasswordLink = By.xpath("//a[@id='container_0_HlForgotPassword']");
 
-   
     
-    public void enterUserName(String username) {
+    public void enterUserName(String username) 
+    {
+    	test.log(Status.INFO, "\"Clearing and entering username: {}\", username");
         driver.findElement(emailInput).clear();
         driver.findElement(emailInput).sendKeys(username);
     }
@@ -33,7 +37,6 @@ public class LoginPage extends BasePage {
         driver.findElement(loginButton).click();
     }
 
-    // Getters
     public String getUserName() {
         return driver.findElement(emailInput).getAttribute("value");
     }
@@ -41,13 +44,16 @@ public class LoginPage extends BasePage {
     public boolean IsLoginButtonEnabled() {
         return driver.findElement(loginButton).isEnabled();
     }
-    
+
+    // Font size, color, placeholder etc.
     public String getInputFontSize(By input) {
         return driver.findElement(input).getCssValue("font-size");
     }
 
     public String getUsernameLabelText() {
+    	//"Started in get username label text
         return driver.findElement(emailLabel).getText();
+        //Finished /get username label text
     }
 
     public String getPasswordLabelText() {
@@ -68,16 +74,6 @@ public class LoginPage extends BasePage {
 
     public boolean isPasswordTextboxDisplayed() {
         return driver.findElement(passwordInput).isDisplayed();
-    }
-
-    public boolean isEmailInputBelowLabel() {
-        return driver.findElement(emailLabel).getLocation().getY()
-             < driver.findElement(emailInput).getLocation().getY();
-    }
-
-    public boolean isPasswordInputBelowLabel() {
-        return driver.findElement(passwordLabel).getLocation().getY()
-             < driver.findElement(passwordInput).getLocation().getY();
     }
 
     public String getEmailPlaceholder() {
@@ -128,51 +124,42 @@ public class LoginPage extends BasePage {
         return driver.findElement(label).getCssValue("color");
     }
 
-    public String getPlaceholderFontSize(By input) {
-        return driver.findElement(input).getCssValue("font-size");
-    }
-
-    public String getPlaceholderColor(By input) {
-        return driver.findElement(input).getCssValue("color");
-    }
-
-    public String getInputBoxBorder(By input) {
-        return driver.findElement(input).getCssValue("border");
-    }
-
-    public void focusInput(By input) {
-        WebElement element = driver.findElement(input);
-        element.click();
-    }
-
-    public String getInputBoxBorderOnFocus(By input) {
-        return driver.findElement(input).getCssValue("border");
-    }
-
-    //Position Checks for full layout structure
-
-    public boolean isEmailErrorBelowEmailInput() {
+    public boolean isEmailInputBelowLabel() {
         return driver.findElement(emailInput).getLocation().getY()
-             < driver.findElement(emailError).getLocation().getY();
+             > driver.findElement(emailLabel).getLocation().getY();
     }
 
-    public boolean isPasswordLabelBelowEmailSection() {
+    public boolean isPasswordInputBelowLabel() {
+        return driver.findElement(passwordInput).getLocation().getY()
+             > driver.findElement(passwordLabel).getLocation().getY();
+    }
+
+    
+    public boolean isEmailLabelAboveEmailInput() {
+    	
+    	//test.log(Log.info, "The email label y value us "+driver.findElement(emailLabel).getLocation().ge ())
+        return driver.findElement(emailLabel).getLocation().getY()
+             < driver.findElement(emailInput).getLocation().getY();
+    }
+
+    public boolean isPasswordLabelAbovePasswordInput() {
+        return driver.findElement(passwordLabel).getLocation().getY()
+             < driver.findElement(passwordInput).getLocation().getY();
+    }
+
+    public boolean isPasswordLabelBelowEmailError() {
         return driver.findElement(emailError).getLocation().getY()
              < driver.findElement(passwordLabel).getLocation().getY();
     }
 
-    public boolean isPasswordErrorBelowPasswordInput() {
-        return driver.findElement(passwordInput).getLocation().getY()
-             < driver.findElement(passwordError).getLocation().getY();
-    }
-
-    public boolean isForgotLinkBelowPasswordError() {
+    public boolean isForgotPasswordLinkBelowPasswordError() {
         return driver.findElement(passwordError).getLocation().getY()
              < driver.findElement(forgotPasswordLink).getLocation().getY();
     }
 
-    public boolean isLoginButtonBelowForgotLink() {
+    public boolean isLoginButtonBelowForgotPasswordLink() {
         return driver.findElement(forgotPasswordLink).getLocation().getY()
              < driver.findElement(loginButton).getLocation().getY();
     }
+
 }

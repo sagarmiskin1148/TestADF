@@ -18,6 +18,7 @@ public class BaseTest {
 
     protected LoginPage loginPage;
     protected static ExtentReports extent;
+    protected static ExtentTest test;
 
     @BeforeSuite
     public void beforeSuite() {
@@ -34,6 +35,9 @@ public class BaseTest {
     @BeforeMethod
     public void beforeMethod(Method method) throws IOException {
         BasePage.InitWebDriver();
+
+        test = ExtentListenerClass.getTest();
+        BasePage.test=test;
         loginPage = new LoginPage();
       
     }
@@ -41,10 +45,6 @@ public class BaseTest {
     @AfterMethod
     public void afterMethod() {
         BasePage.QuitDriver();
-    }
-
-    // ✅ Get current test instance from listener
-    protected ExtentTest getExtentTest() {
-        return ExtentListenerClass.getTest();
+        test=null;
     }
 }
