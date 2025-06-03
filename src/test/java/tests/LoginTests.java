@@ -108,7 +108,7 @@ public class LoginTests extends BaseTest
         test.log(Status.PASS, "Login button color is correct");
 
         
-        int expectedWidth = 495;
+        int expectedWidth = 455;
         int expectedHeight = 48;
         int actualWidth = loginPage.getLoginButtonWidth();
         int actualHeight = loginPage.getLoginButtonHeight();

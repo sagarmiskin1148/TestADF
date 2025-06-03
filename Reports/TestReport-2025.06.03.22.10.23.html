@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">ADF Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jun 3, 2025 05:12:52 PM</span></a>
+<a href="#"><span class="badge badge-primary">Jun 3, 2025 10:10:23 pm</span></a>
 </li>
 </ul>
 </div>
@@ -45,11 +45,6 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
-</a>
-</li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -72,7 +67,6 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -80,95 +74,116 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">validateValidLogin</p>
             <p class="text-sm">
-              <span>5:13:01 PM</span> / <span>00:00:07:735</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>10:10:38 pm</span> / <span>00:00:12:221</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">validateValidLogin</h5>
-<span class='badge badge-success'>06.03.2025 5:13:01 PM</span>
-<span class='badge badge-danger'>06.03.2025 5:13:09 PM</span>
-<span class='badge badge-default'>00:00:07:735</span>
+<h5 class="test-status text-pass">validateValidLogin</h5>
+<span class='badge badge-success'>06.03.2025 10:10:38 pm</span>
+<span class='badge badge-danger'>06.03.2025 10:10:50 pm</span>
+<span class='badge badge-default'>00:00:12:221</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\sajit\git\TestADF\ScreenShots\validateValidLogin.png' src="C:\Users\sajit\git\TestADF\ScreenShots\validateValidLogin.png">
-    <div class="title">Failed Screenshot</div>
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:13:01 PM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:10:38 pm</td>
         <td>
-          <span class='badge white-text red'>validateValidLogin FAILED</span>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:13:02 PM</td>
-        <td>
-          <textarea readonly class="code-block">java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "tests.LoginTests.test" is null
-	at tests.LoginTests.validateValidLogin(LoginTests.java:22)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</textarea>
-          
+          Waiting for username textbox to be visible...
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:09 PM</td>
+        <td>10:10:38 pm</td>
         <td>
-          Verifying if login button is enabled by default...
+          Entering username...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:10:38 pm</td>
+        <td>
+          "Clearing and entering username: {}", username
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:09 PM</td>
+        <td>10:10:38 pm</td>
         <td>
-          Login button is enabled by default
+          Username textbox is visible and Username entered successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:10:38 pm</td>
+        <td>
+          Waiting for password textbox to be visible...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:10:38 pm</td>
+        <td>
+          Entering password...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:10:39 pm</td>
+        <td>
+          Password textbox is visible and Password entered successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:10:39 pm</td>
+        <td>
+          Clicking on Login button...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:10:39 pm</td>
+        <td>
+          Login button clicked successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:10:39 pm</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:10:39 pm</td>
+        <td>
+          Browser closed successfully.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:10:50 pm</td>
+        <td>
+          Browser launched and navigated to: https://qa-cd.audio-digest.org/Login
         </td>
       </tr>
   </tbody>
@@ -183,7 +198,7 @@
           <div class="test-detail">
             <p class="name">validateLoginButtonStatus</p>
             <p class="text-sm">
-              <span>5:13:09 PM</span> / <span>00:00:07:486</span>
+              <span>10:10:50 pm</span> / <span>00:00:13:545</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -192,9 +207,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateLoginButtonStatus</h5>
-<span class='badge badge-success'>06.03.2025 5:13:09 PM</span>
-<span class='badge badge-danger'>06.03.2025 5:13:17 PM</span>
-<span class='badge badge-default'>00:00:07:486</span>
+<span class='badge badge-success'>06.03.2025 10:10:50 pm</span>
+<span class='badge badge-danger'>06.03.2025 10:11:04 pm</span>
+<span class='badge badge-default'>00:00:13:545</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -205,185 +220,38 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:09 PM</td>
-        <td>
-          <span class='badge white-text green'>validateLoginButtonStatus PASSED</span>
-        </td>
-      </tr>
-      <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:16 PM</td>
+        <td>10:10:50 pm</td>
         <td>
-          Step 1: Verifying label text...
+          Verifying if login button is enabled by default...
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:16 PM</td>
+        <td>10:10:50 pm</td>
         <td>
-          Username Label: Expected='E-Mail Address', Actual='E-Mail Address'
+          Login button is enabled by default
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:16 PM</td>
+        <td>10:10:50 pm</td>
         <td>
-          Password Label: Expected='Password', Actual='Password'
+          Test Passed
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:16 PM</td>
+        <td>10:10:50 pm</td>
         <td>
-          Step 2: Verifying positions of input fields...
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:16 PM</td>
-        <td>
-          Input fields positions verified
+          Browser closed successfully.
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:16 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Step 3: Verifying placeholders...
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:16 PM</td>
-        <td>
-          Placeholders verified
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:16 PM</td>
-        <td>
-          Step 4: Verifying eye icon visibility...
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:16 PM</td>
-        <td>
-          Eye icon is visible
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:16 PM</td>
-        <td>
-          Step 5: Verifying Forgot Password link...
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:16 PM</td>
-        <td>
-          Forgot Password link is displayed and clickable
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:16 PM</td>
-        <td>
-          Step 6: Verifying login button...
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:16 PM</td>
-        <td>
-          Login button: Expected Text='Log in', Actual='Log in'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:17 PM</td>
-        <td>
-          Login Button Color: Expected='rgba(0, 122, 195, 1)', Actual='rgba(0, 122, 195, 1)'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:17 PM</td>
-        <td>
-          Login button color is correct
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:17 PM</td>
-        <td>
-          Login Button Size: Expected Width=495, Height=48 | Actual Width=495, Height=48
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:17 PM</td>
-        <td>
-          Login button size is correct
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:17 PM</td>
-        <td>
-          Step 9: Verifying label font size and color...
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:17 PM</td>
-        <td>
-          Label Font Size: Expected='13.33px', Actual='13.33px'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:17 PM</td>
-        <td>
-          Label Font Color: Expected='rgba(35, 35, 35, 1)', Actual='rgba(35, 35, 35, 1)'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:17 PM</td>
-        <td>
-          Label font size and color are correct
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:17 PM</td>
-        <td>
-          Step 10: Verifying input field font size...
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:17 PM</td>
-        <td>
-          Input Font Size: Expected='16px', Actual='16px'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:17 PM</td>
-        <td>
-          Input font size is correct
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:17 PM</td>
-        <td>
-          All UI validation steps passed successfully
+          Browser launched and navigated to: https://qa-cd.audio-digest.org/Login
         </td>
       </tr>
   </tbody>
@@ -398,7 +266,7 @@
           <div class="test-detail">
             <p class="name">validateLoginUI</p>
             <p class="text-sm">
-              <span>5:13:16 PM</span> / <span>00:00:08:837</span>
+              <span>10:11:04 pm</span> / <span>00:00:23:897</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -407,9 +275,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateLoginUI</h5>
-<span class='badge badge-success'>06.03.2025 5:13:16 PM</span>
-<span class='badge badge-danger'>06.03.2025 5:13:25 PM</span>
-<span class='badge badge-default'>00:00:08:837</span>
+<span class='badge badge-success'>06.03.2025 10:11:04 pm</span>
+<span class='badge badge-danger'>06.03.2025 10:11:28 pm</span>
+<span class='badge badge-default'>00:00:23:897</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -420,122 +288,199 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:17 PM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:04 pm</td>
         <td>
-          <span class='badge white-text green'>validateLoginUI PASSED</span>
+          Step 1: Verifying label text...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:11:04 pm</td>
+        <td>
+          Username Label: Expected='E-Mail Address', Actual='E-Mail Address'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:11:04 pm</td>
+        <td>
+          Password Label: Expected='Password', Actual='Password'
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:24 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Verifying positions of login form UI elements...
+          Step 2: Verifying positions of input fields...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:11:04 pm</td>
+        <td>
+          Input fields positions verified
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:24 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Step 1: Checking if email input is below its label...
+          Step 3: Verifying placeholders...
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:24 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Email input is correctly positioned below its label
+          Placeholders verified
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:24 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Step 2: Checking if password input is below its label...
+          Step 4: Verifying eye icon visibility...
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:24 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Password input is correctly positioned below its label
+          Eye icon is visible
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:24 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Step 3: Checking if email label is above email input...
+          Step 5: Verifying Forgot Password link...
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:24 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Email label is correctly positioned above email input
+          Forgot Password link is displayed and clickable
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:24 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Step 4: Checking if password label is above password input...
+          Step 6: Verifying login button...
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:24 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Password label is correctly positioned above password input
+          Login button: Expected Text='Log in', Actual='Log in'
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:24 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Step 5: Checking if password label is below email error...
+          Login Button Color: Expected='rgba(0, 122, 195, 1)', Actual='rgba(0, 122, 195, 1)'
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:24 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Password label is correctly positioned below email error
+          Login button color is correct
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:24 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Step 6: Checking if forgot password link is below password error...
+          Login Button Size: Expected Width=455, Height=48 | Actual Width=455, Height=48
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:25 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Forgot password link is correctly positioned below password error
+          Login button size is correct
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:13:25 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Step 7: Checking if login button is below forgot password link...
+          Step 9: Verifying label font size and color...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:04 pm</td>
+        <td>
+          Label Font Size: Expected='13.33px', Actual='13.33px'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:04 pm</td>
+        <td>
+          Label Font Color: Expected='rgba(35, 35, 35, 1)', Actual='rgba(35, 35, 35, 1)'
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:25 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          Login button is correctly positioned below forgot password link
+          Label font size and color are correct
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:04 pm</td>
+        <td>
+          Step 10: Verifying input field font size...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:04 pm</td>
+        <td>
+          Input Font Size: Expected='16px', Actual='16px'
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:25 PM</td>
+        <td>10:11:04 pm</td>
         <td>
-          All login form UI element position validations passed successfully
+          Input font size is correct
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:11:04 pm</td>
+        <td>
+          All UI validation steps passed successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:11:04 pm</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:05 pm</td>
+        <td>
+          Browser closed successfully.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Browser launched and navigated to: https://qa-cd.audio-digest.org/Login
         </td>
       </tr>
   </tbody>
@@ -550,7 +495,7 @@
           <div class="test-detail">
             <p class="name">validateLoginFormElementPositions</p>
             <p class="text-sm">
-              <span>5:13:24 PM</span> / <span>00:00:00:730</span>
+              <span>10:11:28 pm</span> / <span>00:00:00:742</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -559,9 +504,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateLoginFormElementPositions</h5>
-<span class='badge badge-success'>06.03.2025 5:13:24 PM</span>
-<span class='badge badge-danger'>06.03.2025 5:13:25 PM</span>
-<span class='badge badge-default'>00:00:00:730</span>
+<span class='badge badge-success'>06.03.2025 10:11:28 pm</span>
+<span class='badge badge-danger'>06.03.2025 10:11:28 pm</span>
+<span class='badge badge-default'>00:00:00:742</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -572,10 +517,129 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:25 PM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:28 pm</td>
         <td>
-          <span class='badge white-text green'>validateLoginFormElementPositions PASSED</span>
+          Verifying positions of login form UI elements...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Step 1: Checking if email input is below its label...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Email input is correctly positioned below its label
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Step 2: Checking if password input is below its label...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Password input is correctly positioned below its label
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Step 3: Checking if email label is above email input...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Email label is correctly positioned above email input
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Step 4: Checking if password label is above password input...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Password label is correctly positioned above password input
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Step 5: Checking if password label is below email error...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Password label is correctly positioned below email error
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Step 6: Checking if forgot password link is below password error...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Forgot password link is correctly positioned below password error
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Step 7: Checking if login button is below forgot password link...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Login button is correctly positioned below forgot password link
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          All login form UI element position validations passed successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:11:28 pm</td>
+        <td>
+          Browser closed successfully.
         </td>
       </tr>
   </tbody>
@@ -592,79 +656,30 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">java.lang.NullPointerException</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>java.lang.NullPointerException</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>17:13:01 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='1'>validateValidLogin</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="container-fluid p-4 view dashboard-view">
+<div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jun 3, 2025 05:12:52 PM</h3>
+<h3>Jun 3, 2025 10:10:23 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jun 3, 2025 05:13:26 PM</h3>
+<h3>Jun 3, 2025 10:11:28 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>3</h3>
+<h3>4</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -680,12 +695,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='75%'>
-<b>3</b> tests passed
+<div><small data-tooltip='100%'>
+<b>4</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='25%'><b>1</b> tests failed,
+<small data-tooltip='0%'><b>0</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -703,10 +718,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='50%'><b>24</b> events passed</small></div>
+<div><small data-tooltip='44%'><b>28</b> events passed</small></div>
 <div>
-<small data-tooltip='4%'><b>2</b> events failed,
-<b data-tooltip='%'>22</b> others
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>35</b> others
 </small>
 </div>
 </div>
@@ -722,7 +737,7 @@
 </div></div>
 <script>
 var timeline = {
-"validateValidLogin":7.735,"validateLoginButtonStatus":7.486,"validateLoginUI":8.837,"validateLoginFormElementPositions":0.73
+"validateValidLogin":12.221,"validateLoginButtonStatus":13.545,"validateLoginUI":23.897,"validateLoginFormElementPositions":0.742
 };
 </script>
 <div class="row">
@@ -749,8 +764,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 3,
-failParent: 1,
+passParent: 4,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -766,11 +781,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 24,
-failEvents: 2,
+passEvents: 28,
+failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 22
+infoEvents: 35
 };
 </script>        </div>
       </div>

@@ -10,26 +10,28 @@ import com.aventstack.extentreports.ExtentTest;
 import utils.ConfigReader;
 
 public class BasePage {
-    public static WebDriver driver;
-    
-    public static ExtentTest test;
-    
 
-    public static void InitWebDriver() 
-    {
-    	//instaciate driver
+    public static WebDriver driver;
+    public static ExtentTest test;  // This will be set in BaseTest per method
+
+    public static void InitWebDriver() {
+        // Instantiate driver
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        
-        //navigate to url
+
+        // Navigate to URL from config
         driver.get(ConfigReader.getProperty("url"));
+
+      
     }
 
     public static void QuitDriver() {
         if (driver != null) {
             driver.quit();
-            test=null;
+            if (test != null) {
+                test.info("Browser closed successfully.");
+            }
         }
     }
 }
