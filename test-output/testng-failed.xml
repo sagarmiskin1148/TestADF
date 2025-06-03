@@ -9,9 +9,12 @@
       <class name="tests.LoginTests">
         <methods>
           <include name="validateValidLogin"/>
+          <include name="validateLoginUI"/>
+          <include name="validateLoginButtonStatus"/>
           <include name="beforeMethod"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
           <include name="afterMethod"/>
-          <include name="validateLoginUIErrorMessages"/>
         </methods>
       </class> <!-- tests.LoginTests -->
     </classes>
