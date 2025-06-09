@@ -12,7 +12,7 @@ import utils.ConfigReader;
 public class BasePage {
 
     public static WebDriver driver;
-    public static ExtentTest test;  // This will be set in BaseTest per method
+    public static ExtentTest test;  
 
     public static void InitWebDriver() {
         // Instantiate driver

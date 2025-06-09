@@ -6,4 +6,5 @@
       <class name="tests.LoginTests"/>
     </classes>
   </test>
+  
 </suite>

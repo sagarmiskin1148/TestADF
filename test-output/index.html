@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="validateLoginUI">validateLoginUI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,17 +117,27 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="validateLoginButtonStatus">validateLoginButtonStatus</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="loginWithBlankEmailButFilledPassword">loginWithBlankEmailButFilledPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="loginWithBlankPasswordButFilledEmail">loginWithBlankPasswordButFilledEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="loginWithBlankUsernameAndPassword">loginWithBlankUsernameAndPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="loginWithValidUsernameInvalidPassword">loginWithValidUsernameInvalidPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="validateLoginFormElementPositions">validateLoginFormElementPositions</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="validateLoginUI">validateLoginUI</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -133,6 +157,28 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.LoginTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateLoginUI">
+                  </a> <!-- validateLoginUI -->
+                  <span class="method-name">validateLoginUI</span>
+                  <div class="stack-trace">java.lang.AssertionError: Incorrect label for username field expected [E-Mail Address] but found []
+	at tests.LoginTests.validateLoginUI(LoginTests.java:69)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify UI elements of the login page including labels, placeholders, and buttons)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -141,9 +187,38 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validateLoginButtonStatus">
-                  </a> <!-- validateLoginButtonStatus -->
-                  <span class="method-name">validateLoginButtonStatus</span>
+                  <a name="loginWithBlankEmailButFilledPassword">
+                  </a> <!-- loginWithBlankEmailButFilledPassword -->
+                  <span class="method-name">loginWithBlankEmailButFilledPassword</span>
+                  <em>
+(Verify error messages when email is blank but password is filled)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithBlankPasswordButFilledEmail">
+                  </a> <!-- loginWithBlankPasswordButFilledEmail -->
+                  <span class="method-name">loginWithBlankPasswordButFilledEmail</span>
+                  <em>
+(Verify error messages when password is blank but email is filled)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithBlankUsernameAndPassword">
+                  </a> <!-- loginWithBlankUsernameAndPassword -->
+                  <span class="method-name">loginWithBlankUsernameAndPassword</span>
+                  <em>
+(Verify error when both username and password fields are left blank)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithValidUsernameInvalidPassword">
+                  </a> <!-- loginWithValidUsernameInvalidPassword -->
+                  <span class="method-name">loginWithValidUsernameInvalidPassword</span>
+                  <em>
+(Verify login fails with valid username and invalid password)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -151,13 +226,8 @@
                   <a name="validateLoginFormElementPositions">
                   </a> <!-- validateLoginFormElementPositions -->
                   <span class="method-name">validateLoginFormElementPositions</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validateLoginUI">
-                  </a> <!-- validateLoginUI -->
-                  <span class="method-name">validateLoginUI</span>
+                  <em>
+(Verify positions and visibility of login form elements)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -165,6 +235,8 @@
                   <a name="validateValidLogin">
                   </a> <!-- validateValidLogin -->
                   <span class="method-name">validateValidLogin</span>
+                  <em>
+(Verify successful login with valid username and password)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -221,28 +293,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateValidLogin')
+data.setCell(0, 1, 'loginWithBlankEmailButFilledPassword')
 data.setCell(0, 2, 'tests.LoginTests')
-data.setCell(0, 3, 1409);
+data.setCell(0, 3, 23181);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validateLoginUI')
+data.setCell(1, 1, 'loginWithBlankPasswordButFilledEmail')
 data.setCell(1, 2, 'tests.LoginTests')
-data.setCell(1, 3, 777);
+data.setCell(1, 3, 23167);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'validateLoginFormElementPositions')
+data.setCell(2, 1, 'validateValidLogin')
 data.setCell(2, 2, 'tests.LoginTests')
-data.setCell(2, 3, 433);
+data.setCell(2, 3, 11760);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'validateLoginButtonStatus')
+data.setCell(3, 1, 'loginWithValidUsernameInvalidPassword')
 data.setCell(3, 2, 'tests.LoginTests')
-data.setCell(3, 3, 51);
+data.setCell(3, 3, 1878);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'loginWithBlankUsernameAndPassword')
+data.setCell(4, 2, 'tests.LoginTests')
+data.setCell(4, 3, 804);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'validateLoginFormElementPositions')
+data.setCell(5, 2, 'tests.LoginTests')
+data.setCell(5, 3, 469);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'validateLoginUI')
+data.setCell(6, 2, 'tests.LoginTests')
+data.setCell(6, 3, 115);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -274,56 +358,94 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void tests.LoginTests.validateValidLogin() throws java.lang.InterruptedException)</span>
-                <span class="method-start">694 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">validateValidLogin</span>
-                <span class="method-start">10195 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=validateValidLogin status=SUCCESS method=LoginTests.validateValidLogin()[pri:1, ins...)</span>
-                <span class="method-start">11622 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void tests.LoginTests.validateLoginButtonStatus())</span>
-                <span class="method-start">12247 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">validateLoginButtonStatus</span>
-                <span class="method-start">21174 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=validateLoginButtonStatus status=SUCCESS method=LoginTests.validateLoginButtonStatu...)</span>
-                <span class="method-start">21230 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void tests.LoginTests.validateLoginUI())</span>
-                <span class="method-start">21862 ms</span>
+                <span class="method-start">422 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">validateLoginUI</span>
-                <span class="method-start">30923 ms</span>
+                <span class="method-start">14939 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=validateLoginUI status=SUCCESS method=LoginTests.validateLoginUI()[pri:3, instance:...)</span>
-                <span class="method-start">31700 ms</span>
+                <span class="method-name">afterMethod([TestResult name=validateLoginUI status=FAILURE method=LoginTests.validateLoginUI()[pri:1, instance:...)</span>
+                <span class="method-start">15068 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void tests.LoginTests.validateLoginFormElementPositions())</span>
-                <span class="method-start">32096 ms</span>
+                <span class="method-start">15783 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">validateLoginFormElementPositions</span>
-                <span class="method-start">38759 ms</span>
+                <span class="method-start">24785 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=validateLoginFormElementPositions status=SUCCESS method=LoginTests.validateLoginFor...)</span>
-                <span class="method-start">39192 ms</span>
+                <span class="method-start">25254 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.loginWithBlankUsernameAndPassword())</span>
+                <span class="method-start">25591 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithBlankUsernameAndPassword</span>
+                <span class="method-start">42647 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=loginWithBlankUsernameAndPassword status=SUCCESS method=LoginTests.loginWithBlankUs...)</span>
+                <span class="method-start">43454 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.loginWithBlankEmailButFilledPassword() throws java.lang.InterruptedExce...)</span>
+                <span class="method-start">43821 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithBlankEmailButFilledPassword</span>
+                <span class="method-start">54156 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=loginWithBlankEmailButFilledPassword status=SUCCESS method=LoginTests.loginWithBlan...)</span>
+                <span class="method-start">77339 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.loginWithBlankPasswordButFilledEmail() throws java.lang.InterruptedExce...)</span>
+                <span class="method-start">77756 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithBlankPasswordButFilledEmail</span>
+                <span class="method-start">87008 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=loginWithBlankPasswordButFilledEmail status=SUCCESS method=LoginTests.loginWithBlan...)</span>
+                <span class="method-start">110175 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.loginWithValidUsernameInvalidPassword())</span>
+                <span class="method-start">110574 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithValidUsernameInvalidPassword</span>
+                <span class="method-start">119970 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=loginWithValidUsernameInvalidPassword status=SUCCESS method=LoginTests.loginWithVal...)</span>
+                <span class="method-start">121853 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.validateValidLogin() throws java.lang.InterruptedException)</span>
+                <span class="method-start">122173 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateValidLogin</span>
+                <span class="method-start">138495 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=validateValidLogin status=SUCCESS method=LoginTests.validateValidLogin()[pri:7, ins...)</span>
+                <span class="method-start">150256 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">39513 ms</span>
+                <span class="method-start">150855 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

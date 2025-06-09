@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 03 23:51:23 IST 2025</td>
+<td>Started on:</td><td>Sun Jun 08 11:27:36 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>38 seconds (38846 ms)</td>
+<tr><td>Total time:</td><td>150 seconds (150424 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,57 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.LoginTests.validateLoginUI()'><b>validateLoginUI</b><br>Test class: tests.LoginTests<br>Test method: Verify UI elements of the login page including labels, placeholders, and buttons</td>
+<td><div><pre>java.lang.AssertionError: Incorrect label for username field expected [E-Mail Address] but found []
+	at tests.LoginTests.validateLoginUI(LoginTests.java:69)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace29774113", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace29774113'><pre>java.lang.AssertionError: Incorrect label for username field expected [E-Mail Address] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at tests.LoginTests.validateLoginUI(LoginTests.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>tests.LoginTests@38425407</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,25 +127,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.LoginTests.validateLoginButtonStatus()'><b>validateLoginButtonStatus</b><br>Test class: tests.LoginTests</td>
-<td></td>
-<td>0</td>
-<td>tests.LoginTests@6025e1b6</td></tr>
-<tr>
-<td title='tests.LoginTests.validateValidLogin()'><b>validateValidLogin</b><br>Test class: tests.LoginTests</td>
+<td title='tests.LoginTests.loginWithValidUsernameInvalidPassword()'><b>loginWithValidUsernameInvalidPassword</b><br>Test class: tests.LoginTests<br>Test method: Verify login fails with valid username and invalid password</td>
 <td></td>
 <td>1</td>
-<td>tests.LoginTests@6025e1b6</td></tr>
+<td>tests.LoginTests@38425407</td></tr>
 <tr>
-<td title='tests.LoginTests.validateLoginUI()'><b>validateLoginUI</b><br>Test class: tests.LoginTests</td>
+<td title='tests.LoginTests.validateLoginFormElementPositions()'><b>validateLoginFormElementPositions</b><br>Test class: tests.LoginTests<br>Test method: Verify positions and visibility of login form elements</td>
 <td></td>
 <td>0</td>
-<td>tests.LoginTests@6025e1b6</td></tr>
+<td>tests.LoginTests@38425407</td></tr>
 <tr>
-<td title='tests.LoginTests.validateLoginFormElementPositions()'><b>validateLoginFormElementPositions</b><br>Test class: tests.LoginTests</td>
+<td title='tests.LoginTests.loginWithBlankUsernameAndPassword()'><b>loginWithBlankUsernameAndPassword</b><br>Test class: tests.LoginTests<br>Test method: Verify error when both username and password fields are left blank</td>
 <td></td>
 <td>0</td>
-<td>tests.LoginTests@6025e1b6</td></tr>
+<td>tests.LoginTests@38425407</td></tr>
+<tr>
+<td title='tests.LoginTests.loginWithBlankPasswordButFilledEmail()'><b>loginWithBlankPasswordButFilledEmail</b><br>Test class: tests.LoginTests<br>Test method: Verify error messages when password is blank but email is filled</td>
+<td></td>
+<td>23</td>
+<td>tests.LoginTests@38425407</td></tr>
+<tr>
+<td title='tests.LoginTests.loginWithBlankEmailButFilledPassword()'><b>loginWithBlankEmailButFilledPassword</b><br>Test class: tests.LoginTests<br>Test method: Verify error messages when email is blank but password is filled</td>
+<td></td>
+<td>23</td>
+<td>tests.LoginTests@38425407</td></tr>
+<tr>
+<td title='tests.LoginTests.validateValidLogin()'><b>validateValidLogin</b><br>Test class: tests.LoginTests<br>Test method: Verify successful login with valid username and password</td>
+<td></td>
+<td>11</td>
+<td>tests.LoginTests@38425407</td></tr>
 </table><p>
 </body>
 </html>

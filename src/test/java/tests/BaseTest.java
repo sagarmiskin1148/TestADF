@@ -14,12 +14,15 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
 import pages.BasePage;
+import pages.DashboardPage;
 import pages.LoginPage;
 import utilities.ExtentManager;
 
 public class BaseTest {
 
     protected LoginPage loginPage;
+    protected DashboardPage dashboardPage;
+    
     protected static ExtentReports extent;
     protected static ExtentTest test;
 
@@ -42,6 +45,8 @@ public class BaseTest {
         BasePage.test = test;
 
         loginPage = new LoginPage();
+        dashboardPage = new DashboardPage();
+
     }
 
     @AfterMethod
