@@ -290,8 +290,7 @@ public class LoginTests extends BaseTest
         
         
         loginPage.clickLoginButton();
-        test.log(Status.PASS, "Login button clicked successfully");
-
+     
         
         DashboardPage dashboardPage = new DashboardPage();
 

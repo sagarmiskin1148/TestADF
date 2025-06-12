@@ -309,4 +309,26 @@ public class LoginPage extends BasePage {
         test.log(Status.INFO, "Is Login button below Forgot Password link: " + result);
         return result;
     }
+    
+    
+    public void loginValidUser() {
+        
+        driver.get("https://qa-cd.audio-digest.org/Login");
+
+    
+        String username = utils.ConfigReader.getProperty("username");
+        String password = utils.ConfigReader.getProperty("password");
+
+        
+        enterUserName(username);
+        enterPassword(password);
+        clickLoginButton();
+
+        WaitUtils.waitForUrlToBe(driver, "https://qa-cd.audio-digest.org/Dashboard", 50);
+        test.log(Status.INFO, "User logged in successfully and navigated to Dashboard");
+    }
+    
+    
+    
+
 }

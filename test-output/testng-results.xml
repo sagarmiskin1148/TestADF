@@ -1,44 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-08T11:27:36 IST" name="Suite" finished-at="2025-06-08T11:30:06 IST" duration-ms="150424">
+  <suite started-at="2025-06-11T23:34:48 IST" name="Default suite" finished-at="2025-06-11T23:34:52 IST" duration-ms="3859">
     <groups>
     </groups>
-    <test started-at="2025-06-08T11:27:36 IST" name="Test" finished-at="2025-06-08T11:30:06 IST" duration-ms="150424">
-      <class name="tests.LoginTests">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:27:35 IST" name="beforeSuite" finished-at="2025-06-08T11:27:36 IST" duration-ms="384" status="PASS">
+    <test started-at="2025-06-11T23:34:48 IST" name="Default test" finished-at="2025-06-11T23:34:52 IST" duration-ms="3859">
+      <class name="tests.DashboardTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.DashboardTest@6a6cb05c]" started-at="2025-06-11T23:34:48 IST" name="beforeSuite" finished-at="2025-06-11T23:34:48 IST" duration-ms="331" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:27:36 IST" name="beforeMethod" finished-at="2025-06-08T11:27:50 IST" duration-ms="14516" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.DashboardTest@6a6cb05c]" started-at="2025-06-11T23:34:48 IST" name="beforeMethod" finished-at="2025-06-11T23:34:52 IST" duration-ms="3782" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.LoginTests.validateLoginUI()]]>
+                <![CDATA[public void tests.DashboardTest.validateTopNavigationMenuItems() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="validateLoginUI()[pri:1, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:27:50 IST" name="validateLoginUI" description="Verify UI elements of the login page including labels, placeholders, and buttons" finished-at="2025-06-08T11:27:50 IST" duration-ms="115" status="FAIL">
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Incorrect label for username field expected [E-Mail Address] but found []]]>
+              <![CDATA[unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85ae281920cb18b41fdac43261e0e7aa, get {url=https://qa-cd.audio-digest.org/Dashboard}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\shank\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64894}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64894/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 85ae281920cb18b41fdac43261e0e7aa]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Incorrect label for username field expected [E-Mail Address] but found []
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at tests.LoginTests.validateLoginUI(LoginTests.java:69)
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85ae281920cb18b41fdac43261e0e7aa, get {url=https://qa-cd.audio-digest.org/Dashboard}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\shank\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64894}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64894/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 85ae281920cb18b41fdac43261e0e7aa
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at pages.BasePage.InitWebDriver(BasePage.java:24)
+at tests.BaseTest.beforeMethod(BaseTest.java:43)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:578)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
@@ -63,182 +84,167 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateLoginUI -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:27:50 IST" name="afterMethod" finished-at="2025-06-08T11:27:51 IST" duration-ms="709" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateLoginUI status=FAILURE method=LoginTests.validateLoginUI()[pri:1, instance:tests.LoginTests@38425407] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:27:51 IST" name="beforeMethod" finished-at="2025-06-08T11:28:00 IST" duration-ms="9002" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void tests.LoginTests.validateLoginFormElementPositions()]]>
-              </value>
-            </param>
-          </params>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="validateLoginFormElementPositions()[pri:2, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:28:00 IST" name="validateLoginFormElementPositions" description="Verify positions and visibility of login form elements" finished-at="2025-06-08T11:28:01 IST" duration-ms="469" status="PASS">
+        <test-method signature="validateTopNavigationMenuItems()[pri:1, instance:tests.DashboardTest@6a6cb05c]" started-at="2025-06-11T23:34:52 IST" name="validateTopNavigationMenuItems" description="Verify top navigation menu items are visible and clickable" finished-at="2025-06-11T23:34:52 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85ae281920cb18b41fdac43261e0e7aa, get {url=https://qa-cd.audio-digest.org/Dashboard}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\shank\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64894}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64894/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 85ae281920cb18b41fdac43261e0e7aa]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85ae281920cb18b41fdac43261e0e7aa, get {url=https://qa-cd.audio-digest.org/Dashboard}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\shank\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64894}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64894/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 85ae281920cb18b41fdac43261e0e7aa
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at pages.BasePage.InitWebDriver(BasePage.java:24)
+at tests.BaseTest.beforeMethod(BaseTest.java:43)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:578)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateLoginFormElementPositions -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:28:01 IST" name="afterMethod" finished-at="2025-06-08T11:28:01 IST" duration-ms="337" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateLoginFormElementPositions status=SUCCESS method=LoginTests.validateLoginFormElementPositions()[pri:2, instance:tests.LoginTests@38425407] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- validateTopNavigationMenuItems -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:tests.DashboardTest@6a6cb05c]" started-at="2025-06-11T23:34:52 IST" name="afterMethod" finished-at="2025-06-11T23:34:52 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:28:01 IST" name="beforeMethod" finished-at="2025-06-08T11:28:18 IST" duration-ms="17056" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void tests.LoginTests.loginWithBlankUsernameAndPassword()]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.DashboardTest@6a6cb05c]" started-at="2025-06-11T23:34:52 IST" name="beforeMethod" finished-at="2025-06-11T23:34:52 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithBlankUsernameAndPassword()[pri:3, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:28:18 IST" name="loginWithBlankUsernameAndPassword" description="Verify error when both username and password fields are left blank" finished-at="2025-06-08T11:28:19 IST" duration-ms="804" status="PASS">
+        <test-method signature="validateRecentlyAddedLecturesSection()[pri:2, instance:tests.DashboardTest@6a6cb05c]" started-at="2025-06-11T23:34:52 IST" name="validateRecentlyAddedLecturesSection" finished-at="2025-06-11T23:34:52 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85ae281920cb18b41fdac43261e0e7aa, get {url=https://qa-cd.audio-digest.org/Dashboard}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\shank\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64894}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64894/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 85ae281920cb18b41fdac43261e0e7aa]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [85ae281920cb18b41fdac43261e0e7aa, get {url=https://qa-cd.audio-digest.org/Dashboard}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\shank\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64894}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64894/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 85ae281920cb18b41fdac43261e0e7aa
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at pages.BasePage.InitWebDriver(BasePage.java:24)
+at tests.BaseTest.beforeMethod(BaseTest.java:43)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:578)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithBlankUsernameAndPassword -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:28:19 IST" name="afterMethod" finished-at="2025-06-08T11:28:19 IST" duration-ms="365" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=loginWithBlankUsernameAndPassword status=SUCCESS method=LoginTests.loginWithBlankUsernameAndPassword()[pri:3, instance:tests.LoginTests@38425407] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:28:19 IST" name="beforeMethod" finished-at="2025-06-08T11:28:29 IST" duration-ms="10335" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void tests.LoginTests.loginWithBlankEmailButFilledPassword() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithBlankEmailButFilledPassword()[pri:4, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:28:29 IST" name="loginWithBlankEmailButFilledPassword" description="Verify error messages when email is blank but password is filled" finished-at="2025-06-08T11:28:53 IST" duration-ms="23181" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithBlankEmailButFilledPassword -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:28:53 IST" name="afterMethod" finished-at="2025-06-08T11:28:53 IST" duration-ms="415" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=loginWithBlankEmailButFilledPassword status=SUCCESS method=LoginTests.loginWithBlankEmailButFilledPassword()[pri:4, instance:tests.LoginTests@38425407] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:28:53 IST" name="beforeMethod" finished-at="2025-06-08T11:29:02 IST" duration-ms="9250" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void tests.LoginTests.loginWithBlankPasswordButFilledEmail() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithBlankPasswordButFilledEmail()[pri:5, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:29:02 IST" name="loginWithBlankPasswordButFilledEmail" description="Verify error messages when password is blank but email is filled" finished-at="2025-06-08T11:29:25 IST" duration-ms="23167" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithBlankPasswordButFilledEmail -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:29:25 IST" name="afterMethod" finished-at="2025-06-08T11:29:26 IST" duration-ms="399" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=loginWithBlankPasswordButFilledEmail status=SUCCESS method=LoginTests.loginWithBlankPasswordButFilledEmail()[pri:5, instance:tests.LoginTests@38425407] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:29:26 IST" name="beforeMethod" finished-at="2025-06-08T11:29:35 IST" duration-ms="9396" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void tests.LoginTests.loginWithValidUsernameInvalidPassword()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithValidUsernameInvalidPassword()[pri:6, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:29:35 IST" name="loginWithValidUsernameInvalidPassword" description="Verify login fails with valid username and invalid password" finished-at="2025-06-08T11:29:37 IST" duration-ms="1878" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithValidUsernameInvalidPassword -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:29:37 IST" name="afterMethod" finished-at="2025-06-08T11:29:37 IST" duration-ms="320" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=loginWithValidUsernameInvalidPassword status=SUCCESS method=LoginTests.loginWithValidUsernameInvalidPassword()[pri:6, instance:tests.LoginTests@38425407] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- validateRecentlyAddedLecturesSection -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:tests.DashboardTest@6a6cb05c]" started-at="2025-06-11T23:34:52 IST" name="afterMethod" finished-at="2025-06-11T23:34:52 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:29:37 IST" name="beforeMethod" finished-at="2025-06-08T11:29:54 IST" duration-ms="16322" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void tests.LoginTests.validateValidLogin() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="validateValidLogin()[pri:7, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:29:54 IST" name="validateValidLogin" description="Verify successful login with valid username and password" finished-at="2025-06-08T11:30:06 IST" duration-ms="11760" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateValidLogin -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:30:06 IST" name="afterMethod" finished-at="2025-06-08T11:30:06 IST" duration-ms="553" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateValidLogin status=SUCCESS method=LoginTests.validateValidLogin()[pri:7, instance:tests.LoginTests@38425407] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.LoginTests@38425407]" started-at="2025-06-08T11:30:06 IST" name="afterSuite" finished-at="2025-06-08T11:30:07 IST" duration-ms="369" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.DashboardTest@6a6cb05c]" started-at="2025-06-11T23:34:52 IST" name="afterSuite" finished-at="2025-06-11T23:34:52 IST" duration-ms="363" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- tests.LoginTests -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- tests.DashboardTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
