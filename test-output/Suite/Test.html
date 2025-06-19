@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>24/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 10 19:21:22 IST 2025</td>
+<td>Started on:</td><td>Thu Jun 19 01:20:34 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>207 seconds (207558 ms)</td>
+<tr><td>Total time:</td><td>461 seconds (461080 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,18 +76,18 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.LoginTests.validateLoginUI()'><b>validateLoginUI</b><br>Test class: tests.LoginTests<br>Test method: Verify UI elements of the login page including labels, placeholders, and buttons</td>
-<td><div><pre>java.lang.AssertionError: Incorrect label for username field expected [E-Mail Address] but found []
-	at tests.LoginTests.validateLoginUI(LoginTests.java:29)
+<td title='tests.LoginTests.verifyUsernameLabelText()'><b>verifyUsernameLabelText</b><br>Test class: tests.LoginTests<br>Test method: Verify username label text</td>
+<td><div><pre>java.lang.AssertionError: Username label mismatch expected [E-Mail Address] but found []
+	at tests.LoginTests.verifyUsernameLabelText(LoginTests.java:26)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace22668134", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace22668134'><pre>java.lang.AssertionError: Incorrect label for username field expected [E-Mail Address] but found []
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace309060377", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace309060377'><pre>java.lang.AssertionError: Username label mismatch expected [E-Mail Address] but found []
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
-	at tests.LoginTests.validateLoginUI(LoginTests.java:29)
+	at tests.LoginTests.verifyUsernameLabelText(LoginTests.java:26)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -116,7 +116,89 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>tests.LoginTests@702657cc</td></tr>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.DashboardTest.verifyRecentlyAddedHeading()'><b>verifyRecentlyAddedHeading</b><br>Test class: tests.DashboardTest<br>Test method: Verify Recently Added section heading</td>
+<td><div><pre>java.lang.AssertionError: Heading should match exactly. expected [Recently Added] but found [[Missing]]
+	at tests.DashboardTest.verifyRecentlyAddedHeading(DashboardTest.java:85)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1746833724", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1746833724'><pre>java.lang.AssertionError: Heading should match exactly. expected [Recently Added] but found [[Missing]]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at tests.DashboardTest.verifyRecentlyAddedHeading(DashboardTest.java:85)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>26</td>
+<td>tests.DashboardTest@139982de</td></tr>
+<tr>
+<td title='tests.DashboardTest.verifyRecentlyAddedSectionVisible()'><b>verifyRecentlyAddedSectionVisible</b><br>Test class: tests.DashboardTest<br>Test method: Verify Recently Added section visibility</td>
+<td><div><pre>java.lang.AssertionError: &apos;Recently Added&apos; section should be visible. expected [true] but found [false]
+	at tests.DashboardTest.verifyRecentlyAddedSectionVisible(DashboardTest.java:73)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace541330540", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace541330540'><pre>java.lang.AssertionError: &apos;Recently Added&apos; section should be visible. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at tests.DashboardTest.verifyRecentlyAddedSectionVisible(DashboardTest.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>56</td>
+<td>tests.DashboardTest@139982de</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -127,40 +209,125 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.LoginTests.validateValidLogin()'><b>validateValidLogin</b><br>Test class: tests.LoginTests<br>Test method: Verify successful login with valid username and password</td>
-<td></td>
-<td>22</td>
-<td>tests.LoginTests@702657cc</td></tr>
-<tr>
-<td title='tests.LoginTests.loginWithBlankPasswordButFilledEmail()'><b>loginWithBlankPasswordButFilledEmail</b><br>Test class: tests.LoginTests<br>Test method: Verify error messages when password is blank but email is filled</td>
-<td></td>
-<td>23</td>
-<td>tests.LoginTests@702657cc</td></tr>
-<tr>
-<td title='tests.DashboardTest.validateTopNavigationMenuItems()'><b>validateTopNavigationMenuItems</b><br>Test class: tests.DashboardTest<br>Test method: Verify top navigation menu items are visible and clickable</td>
-<td></td>
-<td>26</td>
-<td>tests.DashboardTest@1165b38</td></tr>
-<tr>
-<td title='tests.LoginTests.validateLoginFormElementPositions()'><b>validateLoginFormElementPositions</b><br>Test class: tests.LoginTests<br>Test method: Verify positions and visibility of login form elements</td>
+<td title='tests.LoginTests.verifyForgotPasswordLink()'><b>verifyForgotPasswordLink</b><br>Test class: tests.LoginTests<br>Test method: Verify Forgot Password link visibility and clickability</td>
 <td></td>
 <td>0</td>
-<td>tests.LoginTests@702657cc</td></tr>
+<td>tests.LoginTests@dd05255</td></tr>
 <tr>
-<td title='tests.LoginTests.loginWithBlankUsernameAndPassword()'><b>loginWithBlankUsernameAndPassword</b><br>Test class: tests.LoginTests<br>Test method: Verify error when both username and password fields are left blank</td>
+<td title='tests.LoginTests.loginWithBlankPassword()'><b>loginWithBlankPassword</b><br>Test class: tests.LoginTests<br>Test method: Verify login with filled email and blank password</td>
 <td></td>
 <td>0</td>
-<td>tests.LoginTests@702657cc</td></tr>
+<td>tests.LoginTests@dd05255</td></tr>
 <tr>
-<td title='tests.LoginTests.loginWithBlankEmailButFilledPassword()'><b>loginWithBlankEmailButFilledPassword</b><br>Test class: tests.LoginTests<br>Test method: Verify error messages when email is blank but password is filled</td>
+<td title='tests.DashboardTest.verifyTopNavigationMenusVisibility()'><b>verifyTopNavigationMenusVisibility</b><br>Test class: tests.DashboardTest<br>Test method: Verify all top navigation menu items are visible</td>
 <td></td>
-<td>23</td>
-<td>tests.LoginTests@702657cc</td></tr>
+<td>28</td>
+<td>tests.DashboardTest@139982de</td></tr>
 <tr>
-<td title='tests.LoginTests.loginWithValidUsernameInvalidPassword()'><b>loginWithValidUsernameInvalidPassword</b><br>Test class: tests.LoginTests<br>Test method: Verify login fails with valid username and invalid password</td>
+<td title='tests.LoginTests.verifyPasswordLabelAboveInput()'><b>verifyPasswordLabelAboveInput</b><br>Test class: tests.LoginTests<br>Test method: Verify password label is above password input</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.DashboardTest.verifyEachRecentlyAddedLectureDetails()'><b>verifyEachRecentlyAddedLectureDetails</b><br>Test class: tests.DashboardTest<br>Test method: Verify details of each Recently Added lecture card</td>
+<td></td>
+<td>20</td>
+<td>tests.DashboardTest@139982de</td></tr>
+<tr>
+<td title='tests.LoginTests.verifyPasswordInputBelowLabel()'><b>verifyPasswordInputBelowLabel</b><br>Test class: tests.LoginTests<br>Test method: Verify password input is below its label</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.LoginTests.verifyPasswordLabelText()'><b>verifyPasswordLabelText</b><br>Test class: tests.LoginTests<br>Test method: Verify password label text</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.LoginTests.verifyLoginButtonColor()'><b>verifyLoginButtonColor</b><br>Test class: tests.LoginTests<br>Test method: Verify login button color</td>
+<td></td>
+<td>5</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.LoginTests.loginWithInvalidPassword()'><b>loginWithInvalidPassword</b><br>Test class: tests.LoginTests<br>Test method: Verify login fails with valid username and invalid password</td>
 <td></td>
 <td>1</td>
-<td>tests.LoginTests@702657cc</td></tr>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.LoginTests.verifyForgotPasswordLinkBelowError()'><b>verifyForgotPasswordLinkBelowError</b><br>Test class: tests.LoginTests<br>Test method: Verify forgot password link is below password error</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.LoginTests.verifyEmailInputBelowLabel()'><b>verifyEmailInputBelowLabel</b><br>Test class: tests.LoginTests<br>Test method: Verify email input is below its label</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.DashboardTest.verifyRecentlyAddedLectureCount()'><b>verifyRecentlyAddedLectureCount</b><br>Test class: tests.DashboardTest<br>Test method: Verify Recently Added section contains at least one lecture</td>
+<td></td>
+<td>15</td>
+<td>tests.DashboardTest@139982de</td></tr>
+<tr>
+<td title='tests.LoginTests.verifyEmailPlaceholder()'><b>verifyEmailPlaceholder</b><br>Test class: tests.LoginTests<br>Test method: Verify email placeholder</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.LoginTests.loginWithBlankUsernameAndPassword()'><b>loginWithBlankUsernameAndPassword</b><br>Test class: tests.LoginTests<br>Test method: Verify login with blank username and password</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.LoginTests.verifyLoginButtonProperties()'><b>verifyLoginButtonProperties</b><br>Test class: tests.LoginTests<br>Test method: Verify login button visibility, text, and enablement</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.LoginTests.verifyLoginButtonSize()'><b>verifyLoginButtonSize</b><br>Test class: tests.LoginTests<br>Test method: Verify login button size</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.LoginTests.verifyEyeIconVisibility()'><b>verifyEyeIconVisibility</b><br>Test class: tests.LoginTests<br>Test method: Verify eye icon visibility</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.LoginTests.verifyLoginButtonBelowForgotPasswordLink()'><b>verifyLoginButtonBelowForgotPasswordLink</b><br>Test class: tests.LoginTests<br>Test method: Verify login button is below forgot password link</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.DashboardTest.verifyTopNavigationMenusClickable()'><b>verifyTopNavigationMenusClickable</b><br>Test class: tests.DashboardTest<br>Test method: Verify all top navigation menu items are clickable</td>
+<td></td>
+<td>26</td>
+<td>tests.DashboardTest@139982de</td></tr>
+<tr>
+<td title='tests.LoginTests.verifyPasswordPlaceholder()'><b>verifyPasswordPlaceholder</b><br>Test class: tests.LoginTests<br>Test method: Verify password placeholder</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.LoginTests.verifyPasswordLabelBelowEmailError()'><b>verifyPasswordLabelBelowEmailError</b><br>Test class: tests.LoginTests<br>Test method: Verify password label is below email error</td>
+<td></td>
+<td>6</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.LoginTests.loginWithValidCredentials()'><b>loginWithValidCredentials</b><br>Test class: tests.LoginTests<br>Test method: Verify login with valid credentials</td>
+<td></td>
+<td>13</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.LoginTests.verifyEmailLabelAboveInput()'><b>verifyEmailLabelAboveInput</b><br>Test class: tests.LoginTests<br>Test method: Verify email label is above email input</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTests@dd05255</td></tr>
+<tr>
+<td title='tests.LoginTests.loginWithBlankEmail()'><b>loginWithBlankEmail</b><br>Test class: tests.LoginTests<br>Test method: Verify login with blank email and filled password</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTests@dd05255</td></tr>
 </table><p>
 </body>
 </html>

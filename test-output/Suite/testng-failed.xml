@@ -3,9 +3,19 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="tests.DashboardTest">
+        <methods>
+          <include name="verifyRecentlyAddedSectionVisible"/>
+          <include name="beforeMethod"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="verifyRecentlyAddedHeading"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- tests.DashboardTest -->
       <class name="tests.LoginTests">
         <methods>
-          <include name="validateLoginUI"/>
+          <include name="verifyUsernameLabelText"/>
           <include name="beforeMethod"/>
           <include name="afterSuite"/>
           <include name="beforeSuite"/>

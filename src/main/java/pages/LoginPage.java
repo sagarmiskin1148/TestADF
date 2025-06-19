@@ -15,7 +15,7 @@ public class LoginPage extends BasePage {
     public By emailInput = By.xpath("//input[@id='TxtUserName']");
     private By emailError = By.xpath("//span[@id='reqUserName']");
     
-    private By loginFailureErrorMessage=By.xpath("//span[contains(normalize-space(text()), 'Your login attempt was not successful')]");
+    private By loginFailureErrorMessage = By.xpath("//span[contains(normalize-space(text()),'Your login attempt was not successful')]");
 
     private By passwordLabel = By.xpath("//label[normalize-space()='Password']");
     private By passwordInput = By.xpath("//input[@id='TxtPassword']");
@@ -69,12 +69,17 @@ public class LoginPage extends BasePage {
         test.log(Status.INFO, "Input field font size: " + size);
         return size;
     }
-
     public String getUsernameLabelText() {
         test.log(Status.INFO, "Getting label text for Username.");
-        String text = driver.findElement(emailLabel).getText();
-        test.log(Status.INFO, "Username label text: '" + text + "'");
-        return text;
+        try {
+            WebElement labelElement = WaitUtils.waitForVisibility(driver, emailLabel, 20);
+            String text = labelElement.getText().trim();
+            test.log(Status.INFO, "Username label text: '" + text + "'");
+            return text;
+        } catch (Exception e) {
+            test.log(Status.FAIL, "Failed to get Username label text: " + e.getMessage());
+            return "";
+        }
     }
 
     public String getPasswordLabelText() {
@@ -141,7 +146,7 @@ public class LoginPage extends BasePage {
     public String getloginFailureErrorMessage() {
         test.log(Status.INFO, "Checking for login failure error message");
         try {
-            WebElement errorElement = WaitUtils.waitForVisibility(driver, loginFailureErrorMessage, 20);
+            WebElement errorElement = WaitUtils.waitForVisibility(driver, loginFailureErrorMessage, 30);
             String errorMsg = errorElement.getText().trim();
             if (!errorMsg.isEmpty()) {
                 test.log(Status.INFO, "Login failure error message found: " + errorMsg);
@@ -313,7 +318,7 @@ public class LoginPage extends BasePage {
     
     public void loginValidUser() {
         
-        driver.get("https://qa-cd.audio-digest.org/Login");
+        driver.get("https://www.audio-digest.org/Login");
 
     
         String username = utils.ConfigReader.getProperty("username");
@@ -324,7 +329,7 @@ public class LoginPage extends BasePage {
         enterPassword(password);
         clickLoginButton();
 
-        WaitUtils.waitForUrlToBe(driver, "https://qa-cd.audio-digest.org/Dashboard", 50);
+        WaitUtils.waitForUrlToBe(driver, "https://www.audio-digest.org/Dashboard", 50);
         test.log(Status.INFO, "User logged in successfully and navigated to Dashboard");
     }
     

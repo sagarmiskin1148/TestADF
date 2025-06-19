@@ -1,130 +1,123 @@
+// DashboardPage.java
 package pages;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-
 import com.aventstack.extentreports.Status;
+import utils.WaitUtils;
 
+public class DashboardPage extends BasePage {
 
-
-public class DashboardPage extends BasePage 
-{
-
+    // Locators
     private By topMenuItems = By.xpath("//ul[@class='megamenu']//a");
-    private By recentlyAddedHeading= By.xpath("//h1[normalize-space()=' Recently Added']"); 
+    private By recentlyAddedHeading = By.xpath("//h1[normalize-space()=' Recently Added']");
     private By lectureCards = By.xpath("(//ul[@class='libitems'])[1]");
 
-    public String getCurrentPageUrl()
-    {
+    
+    
+    
+    // Expected menus
+    public static final List<String> EXPECTED_TOP_MENUS = Arrays.asList(
+        "Dashboard", 
+        "Library",
+        "Playlists", 
+        "Credit Tracker", 
+        "Why AudioDigest?",
+        "CME/CE Resource Center"
+    );
+
+    
+    
+    public String getCurrentPageUrl() {
         return driver.getCurrentUrl();
     }
 
-    public List<String> getAllTopMenuTexts() 
+    
+    
+    public boolean areAllMenusVisible(List<String> expectedMenus) 
     {
-        List<WebElement> elements = driver.findElements(topMenuItems);
-        List<String> menuTexts = new ArrayList<>();
-
-        for (WebElement element : elements) 
-        {
-            String text = element.getText().trim();
-            if (!text.isEmpty()) {
-                menuTexts.add(text);
-            }
-        }
-        return menuTexts;
-    }
-
-    public boolean areAllMenusVisibleAndClickable(List<String> expectedMenus)
-    {
+        test.log(Status.INFO, "Validating visibility of all top menu items...");
         List<WebElement> elements = driver.findElements(topMenuItems);
         List<String> actualMenus = new ArrayList<>();
-
-        test.log(Status.INFO, "Menu Validation Start");
 
         for (WebElement el : elements) {
             try {
                 String text = el.getText().trim();
-                if (!text.isEmpty()) {
-                    if (el.isDisplayed() && el.isEnabled())
-                    {
-                        actualMenus.add(text.toLowerCase());
-                        test.log(Status.INFO, "Menu: '" + text + "' is visible and clickable.");
-                    } else {
-                        test.log(Status.WARNING, "Menu: '" + text + "' is NOT visible or clickable.");
-                    }
+                if (!text.isEmpty() && el.isDisplayed()) {
+                    actualMenus.add(text.toLowerCase());
                 }
             } catch (Exception e) {
-                test.log(Status.FAIL, "Exception while checking menu item: " + e.getMessage());
+                test.log(Status.WARNING, "Exception in menu visibility check: " + e.getMessage());
             }
         }
 
-        test.log(Status.INFO, "Expected Menus: " + expectedMenus.toString());
-        test.log(Status.INFO, "Actual Menus Found: " + actualMenus.toString());
+        return actualMenus.containsAll(expectedMenus.stream().map(String::toLowerCase).toList());
+    }
 
+    
+    
+    public boolean areAllMenusClickable(List<String> expectedMenus) 
+    {
+        test.log(Status.INFO, "Validating clickability of all top menu items...");
+        List<WebElement> elements = driver.findElements(topMenuItems);
+        List<String> actualMenus = new ArrayList<>();
 
-     
-        List<String> normalizedExpectedMenus = new ArrayList<>();
-        for (String menu : expectedMenus) {
-            normalizedExpectedMenus.add(menu.toLowerCase());
+        for (WebElement el : elements)
+        {
+            try {
+                String text = el.getText().trim();
+                if (!text.isEmpty() && el.isDisplayed() && el.isEnabled()) {
+                    actualMenus.add(text.toLowerCase());
+                }
+            } catch (Exception e) {
+                test.log(Status.WARNING, "Exception in menu clickability check: " + e.getMessage());
+            }
         }
 
-        return actualMenus.containsAll(normalizedExpectedMenus);
+        return actualMenus.containsAll(expectedMenus.stream().map(String::toLowerCase).toList());
     }
-    
-    
-    
-  
-    
-  
-  
 
+    
+    
     public boolean isRecentlyAddedSectionVisible() {
         try {
-            boolean visible = driver.findElement(recentlyAddedHeading).isDisplayed();
-            test.log(Status.INFO, "'Recently Added' section visible: " + visible);
-            return visible;
+            WebElement heading = WaitUtils.waitForVisibility(driver, recentlyAddedHeading, 30);
+            return heading.isDisplayed();
         } catch (Exception e) {
-            test.log(Status.WARNING, "Recently Added' heading not found.");
+            test.log(Status.WARNING, "Recently Added section not visible: " + e.getMessage());
             return false;
         }
     }
 
+    
+    
     public String getRecentlyAddedHeadingText() {
         try {
-            String heading = driver.findElement(recentlyAddedHeading).getText().trim();
-            test.log(Status.INFO, "Recently Added Heading: " + heading);
-            return heading;
+            return driver.findElement(recentlyAddedHeading).getText().trim();
         } catch (Exception e) {
-            return "[Heading Not Found]";
+            return "[Missing]";
         }
     }
 
+    
+   
     public List<LectureCard> getAllRecentlyAddedLectures() {
         List<LectureCard> lectureList = new ArrayList<>();
         List<WebElement> cards = driver.findElements(lectureCards);
-        test.log(Status.INFO, "Total lectures found: " + cards.size());
 
-        for (int i = 0; i < cards.size(); i++) {
-            LectureCard card = new LectureCard(cards.get(i));
-            lectureList.add(card);
-
-            test.log(Status.INFO, "\n Lecture #" + (i + 1));
-            test.log(Status.INFO, "Title: " + card.getTitle());
-            test.log(Status.INFO, "Date: " + card.getDate());
-            test.log(Status.INFO, "Credit: " + card.getCredit());
-            test.log(Status.INFO, "Duration: " + card.getDuration());
-            test.log(Status.INFO, "Play Button Visible: " + card.isPlayButtonVisible());
-            test.log(Status.INFO, "Card Visible: " + card.isVisible());
+        for (WebElement card : cards) {
+            lectureList.add(new LectureCard(card));
         }
-
         return lectureList;
     }
 
-
+    
+    
+    
     public class LectureCard {
         private WebElement card;
 
@@ -133,11 +126,7 @@ public class DashboardPage extends BasePage
         }
 
         public boolean isVisible() {
-            try {
-                return card.isDisplayed();
-            } catch (Exception e) {
-                return false;
-            }
+            return card.isDisplayed();
         }
 
         public String getTitle() {
@@ -165,16 +154,14 @@ public class DashboardPage extends BasePage
             }
         }
 
+        
+        
         private String getChildTextSafe(String cssSelector) {
             try {
                 return card.findElement(By.cssSelector(cssSelector)).getText().trim();
-            } catch (NoSuchElementException e) 
-            {
+            } catch (NoSuchElementException e) {
                 return "[Missing]";
             }
         }
     }
-}    
-    
-
-
+}

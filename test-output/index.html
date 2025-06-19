@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +38,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-skipped">Default suite</span>
+            <a href="#" panel-name="suite-Suite" class="navigator-link">
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\shank\AppData\Local\Temp\testng-eclipse--1164071619\testng-customsuite.xml</span>
+                  <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
+                    <span>C:\Users\shank\git\TestADF\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="testlist-Suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="group-Suite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="times-Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,26 +92,160 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,  2 skipped,  </span>
+                    <span class="method-stats">27 methods, 3 failed,   24 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Default_suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="tests.DashboardTest" class="method navigator-link" hash-for-method="validateRecentlyAddedLecturesSection">validateRecentlyAddedLecturesSection</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.DashboardTest" class="method navigator-link" hash-for-method="verifyRecentlyAddedHeading">verifyRecentlyAddedHeading</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="tests.DashboardTest" class="method navigator-link" hash-for-method="validateTopNavigationMenuItems">validateTopNavigationMenuItems</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.DashboardTest" class="method navigator-link" hash-for-method="verifyRecentlyAddedSectionVisible">verifyRecentlyAddedSectionVisible</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Default_suite -->
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyUsernameLabelText">verifyUsernameLabelText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="loginWithBlankEmail">loginWithBlankEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="loginWithBlankPassword">loginWithBlankPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="loginWithBlankUsernameAndPassword">loginWithBlankUsernameAndPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="loginWithInvalidPassword">loginWithInvalidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="loginWithValidCredentials">loginWithValidCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.DashboardTest" class="method navigator-link" hash-for-method="verifyEachRecentlyAddedLectureDetails">verifyEachRecentlyAddedLectureDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyEmailInputBelowLabel">verifyEmailInputBelowLabel</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyEmailLabelAboveInput">verifyEmailLabelAboveInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyEmailPlaceholder">verifyEmailPlaceholder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyEyeIconVisibility">verifyEyeIconVisibility</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyForgotPasswordLink">verifyForgotPasswordLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyForgotPasswordLinkBelowError">verifyForgotPasswordLinkBelowError</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyLoginButtonBelowForgotPasswordLink">verifyLoginButtonBelowForgotPasswordLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyLoginButtonColor">verifyLoginButtonColor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyLoginButtonProperties">verifyLoginButtonProperties</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyLoginButtonSize">verifyLoginButtonSize</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyPasswordInputBelowLabel">verifyPasswordInputBelowLabel</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyPasswordLabelAboveInput">verifyPasswordLabelAboveInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyPasswordLabelBelowEmailError">verifyPasswordLabelBelowEmailError</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyPasswordLabelText">verifyPasswordLabelText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyPasswordPlaceholder">verifyPasswordPlaceholder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.DashboardTest" class="method navigator-link" hash-for-method="verifyRecentlyAddedLectureCount">verifyRecentlyAddedLectureCount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.DashboardTest" class="method navigator-link" hash-for-method="verifyTopNavigationMenusClickable">verifyTopNavigationMenusClickable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.DashboardTest" class="method navigator-link" hash-for-method="verifyTopNavigationMenusVisibility">verifyTopNavigationMenusVisibility</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -122,246 +256,842 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-skipped">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">tests.DashboardTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validateRecentlyAddedLecturesSection">
-                  </a> <!-- validateRecentlyAddedLecturesSection -->
-                  <span class="method-name">validateRecentlyAddedLecturesSection</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: net::ERR_INTERNET_DISCONNECTED
-  (Session info: chrome=137.0.7151.69)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [85ae281920cb18b41fdac43261e0e7aa, get {url=https://qa-cd.audio-digest.org/Dashboard}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\shank\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64894}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64894/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 85ae281920cb18b41fdac43261e0e7aa
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
-	at pages.BasePage.InitWebDriver(BasePage.java:24)
-	at tests.BaseTest.beforeMethod(BaseTest.java:43)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:578)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+                  <a name="verifyRecentlyAddedHeading">
+                  </a> <!-- verifyRecentlyAddedHeading -->
+                  <span class="method-name">verifyRecentlyAddedHeading</span>
+                  <div class="stack-trace">java.lang.AssertionError: Heading should match exactly. expected [Recently Added] but found [[Missing]]
+	at tests.DashboardTest.verifyRecentlyAddedHeading(DashboardTest.java:85)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
+... Removed 30 stack frames
 </div> <!-- stack-trace -->
+                  <em>
+(Verify Recently Added section heading)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateTopNavigationMenuItems">
-                  </a> <!-- validateTopNavigationMenuItems -->
-                  <span class="method-name">validateTopNavigationMenuItems</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: net::ERR_INTERNET_DISCONNECTED
-  (Session info: chrome=137.0.7151.69)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [85ae281920cb18b41fdac43261e0e7aa, get {url=https://qa-cd.audio-digest.org/Dashboard}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\shank\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64894}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64894/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 85ae281920cb18b41fdac43261e0e7aa
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
-	at pages.BasePage.InitWebDriver(BasePage.java:24)
-	at tests.BaseTest.beforeMethod(BaseTest.java:43)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:578)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+                  <a name="verifyRecentlyAddedSectionVisible">
+                  </a> <!-- verifyRecentlyAddedSectionVisible -->
+                  <span class="method-name">verifyRecentlyAddedSectionVisible</span>
+                  <div class="stack-trace">java.lang.AssertionError: &apos;Recently Added&apos; section should be visible. expected [true] but found [false]
+	at tests.DashboardTest.verifyRecentlyAddedSectionVisible(DashboardTest.java:73)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(Verify top navigation menu items are visible and clickable)                  </em>
+(Verify Recently Added section visibility)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-skipped -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.LoginTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUsernameLabelText">
+                  </a> <!-- verifyUsernameLabelText -->
+                  <span class="method-name">verifyUsernameLabelText</span>
+                  <div class="stack-trace">java.lang.AssertionError: Username label mismatch expected [E-Mail Address] but found []
+	at tests.LoginTests.verifyUsernameLabelText(LoginTests.java:26)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify username label text)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.DashboardTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEachRecentlyAddedLectureDetails">
+                  </a> <!-- verifyEachRecentlyAddedLectureDetails -->
+                  <span class="method-name">verifyEachRecentlyAddedLectureDetails</span>
+                  <em>
+(Verify details of each Recently Added lecture card)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRecentlyAddedLectureCount">
+                  </a> <!-- verifyRecentlyAddedLectureCount -->
+                  <span class="method-name">verifyRecentlyAddedLectureCount</span>
+                  <em>
+(Verify Recently Added section contains at least one lecture)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyTopNavigationMenusClickable">
+                  </a> <!-- verifyTopNavigationMenusClickable -->
+                  <span class="method-name">verifyTopNavigationMenusClickable</span>
+                  <em>
+(Verify all top navigation menu items are clickable)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyTopNavigationMenusVisibility">
+                  </a> <!-- verifyTopNavigationMenusVisibility -->
+                  <span class="method-name">verifyTopNavigationMenusVisibility</span>
+                  <em>
+(Verify all top navigation menu items are visible)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.LoginTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithBlankEmail">
+                  </a> <!-- loginWithBlankEmail -->
+                  <span class="method-name">loginWithBlankEmail</span>
+                  <em>
+(Verify login with blank email and filled password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithBlankPassword">
+                  </a> <!-- loginWithBlankPassword -->
+                  <span class="method-name">loginWithBlankPassword</span>
+                  <em>
+(Verify login with filled email and blank password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithBlankUsernameAndPassword">
+                  </a> <!-- loginWithBlankUsernameAndPassword -->
+                  <span class="method-name">loginWithBlankUsernameAndPassword</span>
+                  <em>
+(Verify login with blank username and password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithInvalidPassword">
+                  </a> <!-- loginWithInvalidPassword -->
+                  <span class="method-name">loginWithInvalidPassword</span>
+                  <em>
+(Verify login fails with valid username and invalid password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithValidCredentials">
+                  </a> <!-- loginWithValidCredentials -->
+                  <span class="method-name">loginWithValidCredentials</span>
+                  <em>
+(Verify login with valid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEmailInputBelowLabel">
+                  </a> <!-- verifyEmailInputBelowLabel -->
+                  <span class="method-name">verifyEmailInputBelowLabel</span>
+                  <em>
+(Verify email input is below its label)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEmailLabelAboveInput">
+                  </a> <!-- verifyEmailLabelAboveInput -->
+                  <span class="method-name">verifyEmailLabelAboveInput</span>
+                  <em>
+(Verify email label is above email input)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEmailPlaceholder">
+                  </a> <!-- verifyEmailPlaceholder -->
+                  <span class="method-name">verifyEmailPlaceholder</span>
+                  <em>
+(Verify email placeholder)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEyeIconVisibility">
+                  </a> <!-- verifyEyeIconVisibility -->
+                  <span class="method-name">verifyEyeIconVisibility</span>
+                  <em>
+(Verify eye icon visibility)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyForgotPasswordLink">
+                  </a> <!-- verifyForgotPasswordLink -->
+                  <span class="method-name">verifyForgotPasswordLink</span>
+                  <em>
+(Verify Forgot Password link visibility and clickability)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyForgotPasswordLinkBelowError">
+                  </a> <!-- verifyForgotPasswordLinkBelowError -->
+                  <span class="method-name">verifyForgotPasswordLinkBelowError</span>
+                  <em>
+(Verify forgot password link is below password error)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginButtonBelowForgotPasswordLink">
+                  </a> <!-- verifyLoginButtonBelowForgotPasswordLink -->
+                  <span class="method-name">verifyLoginButtonBelowForgotPasswordLink</span>
+                  <em>
+(Verify login button is below forgot password link)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginButtonColor">
+                  </a> <!-- verifyLoginButtonColor -->
+                  <span class="method-name">verifyLoginButtonColor</span>
+                  <em>
+(Verify login button color)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginButtonProperties">
+                  </a> <!-- verifyLoginButtonProperties -->
+                  <span class="method-name">verifyLoginButtonProperties</span>
+                  <em>
+(Verify login button visibility, text, and enablement)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginButtonSize">
+                  </a> <!-- verifyLoginButtonSize -->
+                  <span class="method-name">verifyLoginButtonSize</span>
+                  <em>
+(Verify login button size)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPasswordInputBelowLabel">
+                  </a> <!-- verifyPasswordInputBelowLabel -->
+                  <span class="method-name">verifyPasswordInputBelowLabel</span>
+                  <em>
+(Verify password input is below its label)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPasswordLabelAboveInput">
+                  </a> <!-- verifyPasswordLabelAboveInput -->
+                  <span class="method-name">verifyPasswordLabelAboveInput</span>
+                  <em>
+(Verify password label is above password input)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPasswordLabelBelowEmailError">
+                  </a> <!-- verifyPasswordLabelBelowEmailError -->
+                  <span class="method-name">verifyPasswordLabelBelowEmailError</span>
+                  <em>
+(Verify password label is below email error)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPasswordLabelText">
+                  </a> <!-- verifyPasswordLabelText -->
+                  <span class="method-name">verifyPasswordLabelText</span>
+                  <em>
+(Verify password label text)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPasswordPlaceholder">
+                  </a> <!-- verifyPasswordPlaceholder -->
+                  <span class="method-name">verifyPasswordPlaceholder</span>
+                  <em>
+(Verify password placeholder)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\shank\AppData\Local\Temp\testng-eclipse--1164071619\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\shank\git\TestADF\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;4&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;tests.LoginTests&quot;/&gt;
       &lt;class name=&quot;tests.DashboardTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(27);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateTopNavigationMenuItems')
+data.setCell(0, 1, 'verifyRecentlyAddedSectionVisible')
 data.setCell(0, 2, 'tests.DashboardTest')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 56199);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validateRecentlyAddedLecturesSection')
+data.setCell(1, 1, 'verifyTopNavigationMenusVisibility')
 data.setCell(1, 2, 'tests.DashboardTest')
-data.setCell(1, 3, 0);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(1, 3, 28800);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyRecentlyAddedHeading')
+data.setCell(2, 2, 'tests.DashboardTest')
+data.setCell(2, 3, 26892);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyTopNavigationMenusClickable')
+data.setCell(3, 2, 'tests.DashboardTest')
+data.setCell(3, 3, 26144);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyEachRecentlyAddedLectureDetails')
+data.setCell(4, 2, 'tests.DashboardTest')
+data.setCell(4, 3, 20720);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyRecentlyAddedLectureCount')
+data.setCell(5, 2, 'tests.DashboardTest')
+data.setCell(5, 3, 15890);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'loginWithValidCredentials')
+data.setCell(6, 2, 'tests.LoginTests')
+data.setCell(6, 3, 13089);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyPasswordLabelBelowEmailError')
+data.setCell(7, 2, 'tests.LoginTests')
+data.setCell(7, 3, 6641);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyLoginButtonColor')
+data.setCell(8, 2, 'tests.LoginTests')
+data.setCell(8, 3, 5851);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'loginWithInvalidPassword')
+data.setCell(9, 2, 'tests.LoginTests')
+data.setCell(9, 3, 1845);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'loginWithBlankUsernameAndPassword')
+data.setCell(10, 2, 'tests.LoginTests')
+data.setCell(10, 3, 820);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'loginWithBlankEmail')
+data.setCell(11, 2, 'tests.LoginTests')
+data.setCell(11, 3, 810);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'loginWithBlankPassword')
+data.setCell(12, 2, 'tests.LoginTests')
+data.setCell(12, 3, 768);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verifyLoginButtonProperties')
+data.setCell(13, 2, 'tests.LoginTests')
+data.setCell(13, 3, 103);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'verifyPasswordLabelText')
+data.setCell(14, 2, 'tests.LoginTests')
+data.setCell(14, 3, 91);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verifyUsernameLabelText')
+data.setCell(15, 2, 'tests.LoginTests')
+data.setCell(15, 3, 86);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'verifyEmailInputBelowLabel')
+data.setCell(16, 2, 'tests.LoginTests')
+data.setCell(16, 3, 82);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'verifyPasswordLabelAboveInput')
+data.setCell(17, 2, 'tests.LoginTests')
+data.setCell(17, 3, 72);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'verifyLoginButtonSize')
+data.setCell(18, 2, 'tests.LoginTests')
+data.setCell(18, 3, 71);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'verifyLoginButtonBelowForgotPasswordLink')
+data.setCell(19, 2, 'tests.LoginTests')
+data.setCell(19, 3, 68);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'verifyForgotPasswordLinkBelowError')
+data.setCell(20, 2, 'tests.LoginTests')
+data.setCell(20, 3, 59);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'verifyEmailLabelAboveInput')
+data.setCell(21, 2, 'tests.LoginTests')
+data.setCell(21, 3, 58);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'verifyForgotPasswordLink')
+data.setCell(22, 2, 'tests.LoginTests')
+data.setCell(22, 3, 54);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'verifyPasswordInputBelowLabel')
+data.setCell(23, 2, 'tests.LoginTests')
+data.setCell(23, 3, 50);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'verifyPasswordPlaceholder')
+data.setCell(24, 2, 'tests.LoginTests')
+data.setCell(24, 3, 47);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'verifyEyeIconVisibility')
+data.setCell(25, 2, 'tests.LoginTests')
+data.setCell(25, 3, 42);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'verifyEmailPlaceholder')
+data.setCell(26, 2, 'tests.LoginTests')
+data.setCell(26, 3, 41);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.DashboardTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.DashboardTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyUsernameLabelText())</span>
+                <span class="method-start">397 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">beforeMethod(public void tests.DashboardTest.validateTopNavigationMenuItems() throws java.lang.InterruptedExcepti...)</span>
-                <span class="method-start">369 ms</span>
-              </div> <!-- configuration-method before -->
+                <span class="method-name">verifyUsernameLabelText</span>
+                <span class="method-start">11050 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyUsernameLabelText status=FAILURE method=LoginTests.verifyUsernameLabelText()[...)</span>
+                <span class="method-start">11156 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">4183 ms</span>
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyPasswordLabelText())</span>
+                <span class="method-start">12283 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPasswordLabelText</span>
+                <span class="method-start">20667 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyPasswordLabelText status=SUCCESS method=LoginTests.verifyPasswordLabelText()[...)</span>
+                <span class="method-start">20766 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyEmailPlaceholder())</span>
+                <span class="method-start">21252 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyEmailPlaceholder</span>
+                <span class="method-start">29890 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyEmailPlaceholder status=SUCCESS method=LoginTests.verifyEmailPlaceholder()[pr...)</span>
+                <span class="method-start">29934 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyPasswordPlaceholder())</span>
+                <span class="method-start">30499 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPasswordPlaceholder</span>
+                <span class="method-start">39831 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyPasswordPlaceholder status=SUCCESS method=LoginTests.verifyPasswordPlaceholde...)</span>
+                <span class="method-start">39881 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyEyeIconVisibility())</span>
+                <span class="method-start">40551 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyEyeIconVisibility</span>
+                <span class="method-start">48525 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyEyeIconVisibility status=SUCCESS method=LoginTests.verifyEyeIconVisibility()[...)</span>
+                <span class="method-start">48574 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyForgotPasswordLink())</span>
+                <span class="method-start">49135 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyForgotPasswordLink</span>
+                <span class="method-start">56917 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyForgotPasswordLink status=SUCCESS method=LoginTests.verifyForgotPasswordLink(...)</span>
+                <span class="method-start">56979 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyLoginButtonProperties())</span>
+                <span class="method-start">57531 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginButtonProperties</span>
+                <span class="method-start">64942 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyLoginButtonProperties status=SUCCESS method=LoginTests.verifyLoginButtonPrope...)</span>
+                <span class="method-start">65045 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyLoginButtonColor())</span>
+                <span class="method-start">65567 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginButtonColor</span>
+                <span class="method-start">68736 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyLoginButtonColor status=SUCCESS method=LoginTests.verifyLoginButtonColor()[pr...)</span>
+                <span class="method-start">74587 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyLoginButtonSize())</span>
+                <span class="method-start">75104 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginButtonSize</span>
+                <span class="method-start">82791 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyLoginButtonSize status=SUCCESS method=LoginTests.verifyLoginButtonSize()[pri:...)</span>
+                <span class="method-start">82862 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyEmailInputBelowLabel())</span>
+                <span class="method-start">83267 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyEmailInputBelowLabel</span>
+                <span class="method-start">90946 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyEmailInputBelowLabel status=SUCCESS method=LoginTests.verifyEmailInputBelowLa...)</span>
+                <span class="method-start">91035 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyPasswordInputBelowLabel())</span>
+                <span class="method-start">91480 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPasswordInputBelowLabel</span>
+                <span class="method-start">99461 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyPasswordInputBelowLabel status=SUCCESS method=LoginTests.verifyPasswordInputB...)</span>
+                <span class="method-start">99511 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyEmailLabelAboveInput())</span>
+                <span class="method-start">100054 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyEmailLabelAboveInput</span>
+                <span class="method-start">115334 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyEmailLabelAboveInput status=SUCCESS method=LoginTests.verifyEmailLabelAboveIn...)</span>
+                <span class="method-start">115392 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyPasswordLabelAboveInput())</span>
+                <span class="method-start">115862 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPasswordLabelAboveInput</span>
+                <span class="method-start">124541 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyPasswordLabelAboveInput status=SUCCESS method=LoginTests.verifyPasswordLabelA...)</span>
+                <span class="method-start">124614 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyPasswordLabelBelowEmailError())</span>
+                <span class="method-start">125261 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPasswordLabelBelowEmailError</span>
+                <span class="method-start">128260 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyPasswordLabelBelowEmailError status=SUCCESS method=LoginTests.verifyPasswordL...)</span>
+                <span class="method-start">134901 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyForgotPasswordLinkBelowError())</span>
+                <span class="method-start">135354 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyForgotPasswordLinkBelowError</span>
+                <span class="method-start">143258 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyForgotPasswordLinkBelowError status=SUCCESS method=LoginTests.verifyForgotPas...)</span>
+                <span class="method-start">143317 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.verifyLoginButtonBelowForgotPasswordLink())</span>
+                <span class="method-start">143831 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginButtonBelowForgotPasswordLink</span>
+                <span class="method-start">152616 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyLoginButtonBelowForgotPasswordLink status=SUCCESS method=LoginTests.verifyLog...)</span>
+                <span class="method-start">152690 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.loginWithBlankUsernameAndPassword())</span>
+                <span class="method-start">153159 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithBlankUsernameAndPassword</span>
+                <span class="method-start">161865 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=loginWithBlankUsernameAndPassword status=SUCCESS method=LoginTests.loginWithBlankUs...)</span>
+                <span class="method-start">162685 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.loginWithBlankEmail())</span>
+                <span class="method-start">163117 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithBlankEmail</span>
+                <span class="method-start">180832 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=loginWithBlankEmail status=SUCCESS method=LoginTests.loginWithBlankEmail()[pri:18, ...)</span>
+                <span class="method-start">181644 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.loginWithBlankPassword())</span>
+                <span class="method-start">182291 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithBlankPassword</span>
+                <span class="method-start">197925 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=loginWithBlankPassword status=SUCCESS method=LoginTests.loginWithBlankPassword()[pr...)</span>
+                <span class="method-start">198696 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.loginWithInvalidPassword())</span>
+                <span class="method-start">199181 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithInvalidPassword</span>
+                <span class="method-start">207332 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=loginWithInvalidPassword status=SUCCESS method=LoginTests.loginWithInvalidPassword(...)</span>
+                <span class="method-start">209178 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.LoginTests.loginWithValidCredentials())</span>
+                <span class="method-start">209759 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithValidCredentials</span>
+                <span class="method-start">218956 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=loginWithValidCredentials status=SUCCESS method=LoginTests.loginWithValidCredential...)</span>
+                <span class="method-start">232045 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DashboardTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.DashboardTest.verifyTopNavigationMenusVisibility())</span>
+                <span class="method-start">232799 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyTopNavigationMenusVisibility</span>
+                <span class="method-start">236027 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyTopNavigationMenusVisibility status=SUCCESS method=DashboardTest.verifyTopNav...)</span>
+                <span class="method-start">264828 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.DashboardTest.verifyTopNavigationMenusClickable())</span>
+                <span class="method-start">265409 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyTopNavigationMenusClickable</span>
+                <span class="method-start">274552 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyTopNavigationMenusClickable status=SUCCESS method=DashboardTest.verifyTopNavi...)</span>
+                <span class="method-start">300706 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.DashboardTest.verifyRecentlyAddedSectionVisible())</span>
+                <span class="method-start">301396 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyRecentlyAddedSectionVisible</span>
+                <span class="method-start">316729 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyRecentlyAddedSectionVisible status=FAILURE method=DashboardTest.verifyRecentl...)</span>
+                <span class="method-start">372934 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.DashboardTest.verifyRecentlyAddedHeading())</span>
+                <span class="method-start">374362 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyRecentlyAddedHeading</span>
+                <span class="method-start">383719 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyRecentlyAddedHeading status=FAILURE method=DashboardTest.verifyRecentlyAddedH...)</span>
+                <span class="method-start">410612 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.DashboardTest.verifyRecentlyAddedLectureCount())</span>
+                <span class="method-start">411689 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyRecentlyAddedLectureCount</span>
+                <span class="method-start">420253 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyRecentlyAddedLectureCount status=SUCCESS method=DashboardTest.verifyRecentlyA...)</span>
+                <span class="method-start">436144 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void tests.DashboardTest.verifyEachRecentlyAddedLectureDetails())</span>
+                <span class="method-start">436998 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyEachRecentlyAddedLectureDetails</span>
+                <span class="method-start">440004 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyEachRecentlyAddedLectureDetails status=SUCCESS method=DashboardTest.verifyEac...)</span>
+                <span class="method-start">460733 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">4258 ms</span>
+                <span class="method-start">461523 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

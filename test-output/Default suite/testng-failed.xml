@@ -5,11 +5,11 @@
     <classes>
       <class name="tests.DashboardTest">
         <methods>
-          <include name="validateRecentlyAddedLecturesSection"/>
-          <include name="validateTopNavigationMenuItems"/>
+          <include name="verifyRecentlyAddedSectionVisible"/>
           <include name="beforeMethod"/>
           <include name="afterSuite"/>
           <include name="beforeSuite"/>
+          <include name="verifyRecentlyAddedHeading"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- tests.DashboardTest -->

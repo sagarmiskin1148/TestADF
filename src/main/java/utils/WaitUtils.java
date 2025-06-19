@@ -10,7 +10,7 @@ public class WaitUtils
 {
 
     public static WebElement waitForVisibility(WebDriver driver, By locator, int timeoutSeconds) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
@@ -25,7 +25,7 @@ public class WaitUtils
 
     
     public static void waitForUrlToBe(WebDriver driver, String expectedUrl, int timeoutInSeconds) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
         wait.until(ExpectedConditions.urlToBe(expectedUrl));
     }
     
